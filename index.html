@@ -145,6 +145,8 @@
           $('.timer-minutes').html(varminutes);
          }
          if (varminutes==60){
+          varminutes=0;
+        $('.timer-minutes').html("0"+varminutes);
           setTimeout(augementheures, 100);
         }
         
@@ -168,8 +170,7 @@
          }else{
           $('.timer-heures').html(varheures);
          }
-        varminutes=0;
-        $('.timer-minutes').html("0"+varminutes);
+        
 
         $('.timer-heures').animate({height:hauteurbouton-10 },100, 'easeOutSine', function() {
         $('.timer-heures').animate({height:hauteurbouton },100, 'easeOutSine', function() {
